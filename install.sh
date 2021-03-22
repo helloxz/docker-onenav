@@ -12,12 +12,10 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 date
 #为了精简镜像，可以将tzdata删除了
 apk del tzdata
-#安装unzip
-apk add unzip
 #安装nginx
 apk add nginx
 #安装PHP
-apk add php7 php7-fpm php7-openssl php7-sqlite3 php7-curl php7-json php7-session
+apk add php7 php7-fpm php7-openssl php7-sqlite3 php7-pdo_sqlite php7-curl php7-json php7-session
 #安装git
 apk add git
 
@@ -49,8 +47,7 @@ cd /data/wwwroot/default
 rm -rf /data/wwwroot/default/*
 git clone -b dev https://github.com/helloxz/onenav.git .
 
-#替换路径
-#sed -i "s%\"thedir.*%\"thedir\"=>'/data/wwwroot/default',%g" zdir/config.php
+apk del git
 
 echo '----------------------------------------------'
 echo 'Install Success.'
