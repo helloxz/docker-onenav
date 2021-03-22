@@ -10,3 +10,4 @@ RUN sh install.sh
 COPY ./php.ini /etc/php7/
 VOLUME /data/wwwroot/default/data
 EXPOSE 80
+CMD ["/usr/sbin/run.sh"]
