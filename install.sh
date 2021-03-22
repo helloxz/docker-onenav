@@ -47,6 +47,7 @@ mkdir -p /data/wwwroot/default
 cd 
 git /data/wwwroot/default
 #git glone https://github.com/helloxz/onenav.git .
+rm -rf /data/wwwroot/default/*
 git clone -b dev https://github.com/helloxz/onenav.git .
 
 #替换路径
