@@ -15,13 +15,13 @@ if [ ! -f "${onenav_path}/data/config.php" ]
 		sed -i "s%xiaoz'%${USER}'%g" data/config.php
 		sed -i "s%xiaoz.me'%${PASSWORD}'%g" data/config.php
 		#start php-fpm
-		php-fpm7 -D
+		php-fpm7 -RD
 		#start nginx
 		/usr/sbin/nginx
 		tail -f /var/log/nginx/error.log
 	else
 		#start php-fpm
-		php-fpm7 -D
+		php-fpm7 -RD
 		#start nginx
 		/usr/sbin/nginx
 		tail -f /var/log/nginx/error.log
