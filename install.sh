@@ -44,8 +44,7 @@ mkdir -p /data/wwwroot/default
 #addgroup -S www && adduser -S www -G www
 #chown -R www:www /data/wwwroot/default/
 #拉取代码
-cd 
-git /data/wwwroot/default
+cd /data/wwwroot/default
 #git glone https://github.com/helloxz/onenav.git .
 rm -rf /data/wwwroot/default/*
 git clone -b dev https://github.com/helloxz/onenav.git .
