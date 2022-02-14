@@ -45,7 +45,8 @@ mkdir -p /data/wwwroot/default
 cd /data/wwwroot/default
 #git glone https://github.com/helloxz/onenav.git .
 rm -rf /data/wwwroot/default/*
-git clone https://github.com/helloxz/onenav.git .
+#拉取dev分支
+git clone -b dev https://github.com/helloxz/onenav.git .
 
 apk del git
 
