@@ -48,6 +48,7 @@ rm -rf /data/wwwroot/default/*
 git clone https://github.com/helloxz/onenav.git .
 
 apk del git
+rm -rf .git
 
 echo '----------------------------------------------'
 echo 'Install Success.'
